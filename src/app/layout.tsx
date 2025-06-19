@@ -1,5 +1,7 @@
 import type { Metadata } from "next";
 import { GeistSans } from "geist/font/sans";
+import Providers from "./providers";
+
 import "./globals.css";
 
 export const metadata: Metadata = {
@@ -18,7 +20,9 @@ export default function RootLayout({
 				<link rel="icon" href="/logo.png" sizes="any" />
 			</head>
 
-			<body className={`${GeistSans.className} antialiased`}>{children}</body>
+			<body className={`${GeistSans.className} antialiased`}>
+				<Providers>{children}</Providers>
+			</body>
 		</html>
 	);
 }

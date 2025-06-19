@@ -19,7 +19,7 @@ const navigationItems = [
 	{
 		href: "/conversas",
 		icon: MessageSquare,
-		label: "Conversa",
+		label: "Conversas",
 	},
 	{
 		href: "/resumos",
@@ -34,7 +34,7 @@ const navigationItems = [
 	{
 		href: "/podcasts",
 		icon: Mic,
-		label: "Podcast",
+		label: "Podcasts",
 	},
 	{
 		href: "/outras-ferramentas",

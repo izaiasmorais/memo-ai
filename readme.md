@@ -1,6 +1,6 @@
 # Memory Mind
 
-![image](https://github.com/user-attachments/assets/99fa1299-76b0-43c5-ad7d-1d593e97f035)
+![image](https://github.com/user-attachments/assets/04d00b8d-9603-4122-b63b-3e9ecfee2104)
 
 ## Introdução
 

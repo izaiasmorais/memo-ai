@@ -1,5 +1,7 @@
 # Memory Mind
 
+![image](https://github.com/user-attachments/assets/99fa1299-76b0-43c5-ad7d-1d593e97f035)
+
 ## Introdução
 
 Memory Mind é uma plataforma de IA que permite criar agentes inteligentes com memória contextual. Você pode subir documentos, blocos de texto ou código para treinar a IA em chats específicos, tornando cada chat um especialista no tema desejado. Por exemplo, crie um chat "Clean Architecture", envie exemplos de código e faça perguntas para obter respostas contextualizadas e precisas, otimizando o uso da IA para aprendizado, desenvolvimento e automação de conhecimento.
@@ -48,10 +50,8 @@ pnpm install
 Configure o arquivo .env com suas credenciais:
 
 ```env
-# Exemplo de variáveis de ambiente
 DATABASE_URL=
 OPENAI_API_KEY=
-# Outras chaves de provedores de IA, se necessário
 ```
 
 ## Executando o Projeto

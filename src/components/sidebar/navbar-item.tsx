@@ -22,7 +22,7 @@ export function NavbarItem({ href, icon: Icon, label }: NavbarItemProps) {
 				"flex items-center gap-3 px-3 py-2 text-sm font-medium rounded-lg transition-colors",
 				"hover:bg-muted hover:text-foreground",
 				isActive
-					? "bg-muted text-foreground"
+					? "bg-muted text-rose-500 hover:text-rose-600"
 					: "text-muted-foreground hover:text-foreground"
 			)}
 		>

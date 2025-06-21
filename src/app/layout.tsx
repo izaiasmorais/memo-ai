@@ -5,7 +5,7 @@ import Providers from "./providers";
 import "./globals.css";
 
 export const metadata: Metadata = {
-	title: "Memory Mind",
+	title: "MemoryMind",
 	description: "Crie agentes realmente inteligentes",
 };
 
@@ -17,7 +17,7 @@ export default function RootLayout({
 	return (
 		<html lang="pt-BR" suppressHydrationWarning>
 			<head>
-				<link rel="icon" href="/logo.png" sizes="any" />
+				<link rel="icon" href="/memory-mind-logo.svg" sizes="any" />
 			</head>
 
 			<body className={`${GeistSans.className} antialiased`}>

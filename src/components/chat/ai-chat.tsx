@@ -3,18 +3,46 @@ import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar";
 import { Button } from "@/components/ui/button";
 import { Textarea } from "@/components/ui/textarea";
 import { useChat } from "@ai-sdk/react";
+import { ArrowUp } from "lucide-react";
+import { type KeyboardEvent, useEffect } from "react";
 import { ScrollArea } from "../ui/scroll-area";
+import Prism from "prismjs";
+import "prismjs/themes/prism-tomorrow.css";
+import "prismjs/components/prism-typescript";
+import "prismjs/components/prism-javascript";
+import "prismjs/components/prism-css";
+import "prismjs/components/prism-json";
 
 export function AiChat() {
 	const { messages, input, handleInputChange, handleSubmit } = useChat({});
 
 	const formatContent = (content: string) => {
+		content = content.replace(/```(\w+)?\n([\s\S]*?)```/g, (_, lang, code) => {
+			const language = lang || "javascript";
+
+			const highlightedCode = Prism.highlight(
+				code.trim(),
+				Prism.languages[language] || Prism.languages.javascript,
+				language
+			);
+			return `<pre class="language-${language}"><code class="language-${language}">${highlightedCode}</code></pre>`;
+		});
+
+		content = content.replace(
+			/`([^`]+)`/g,
+			'<code class="inline-code">$1</code>'
+		);
+
 		return content
-			.replace(/\*\*(.*?)\*\*/g, "<strong>$1</strong>") // **texto** -> <strong>
-			.replace(/\*(.*?)\*/g, "<em>$1</em>") // *texto* -> <em>
-			.replace(/\n\n/g, "<br><br>") // \n\n -> <br><br>
-			.replace(/\n/g, "<br>"); // \n -> <br>
+			.replace(/\*\*(.*?)\*\*/g, "<strong>$1</strong>")
+			.replace(/\*(.*?)\*/g, "<em>$1</em>")
+			.replace(/\n\n/g, "<br><br>")
+			.replace(/\n/g, "<br>");
 	};
+
+	useEffect(() => {
+		Prism.highlightAll();
+	}, [messages]);
 
 	return (
 		<div className="w-full max-w-[800px] flex flex-col h-full min-h-0 py-6">
@@ -34,8 +62,9 @@ export function AiChat() {
 						{message.role !== "user" && (
 							<Avatar className="w-10 h-10 flex items-center justify-center bg-muted">
 								<AvatarFallback>MM</AvatarFallback>
+
 								<AvatarImage
-									src="/logo.png"
+									src="/brain.svg"
 									alt="Logo do Memory Mind"
 									className="w-5 h-5"
 								/>
@@ -49,8 +78,8 @@ export function AiChat() {
 								</p>
 							) : (
 								<div
-									className="py-2 leading-tighter w-full
-								overflow-x-auto prose prose-sm max-w-none"
+									className="py-2 leading-tighter w-full overflow-x-auto prose prose-sm
+									max-w-none"
 									dangerouslySetInnerHTML={{
 										__html: formatContent(message.content),
 									}}
@@ -63,16 +92,31 @@ export function AiChat() {
 
 			<form
 				onSubmit={handleSubmit}
-				className="h-[100px] flex gap-4 items-start mt-4"
+				className="relative flex items-center w-full"
 			>
 				<Textarea
-					className="h-full max-h-[100px] rounded-xl"
-					placeholder="Digite sua mensagem"
+					className="min-h-12 w-full rounded-xl bg-muted/80 resize-none py-3 pr-16 text-sm h-[100px]"
+					placeholder="Como posso ajudar?"
 					value={input}
 					onChange={handleInputChange}
+					onKeyDown={(event: KeyboardEvent<HTMLTextAreaElement>) => {
+						if (event.key === "Enter" && !event.shiftKey) {
+							event.preventDefault();
+							handleSubmit(
+								event as unknown as React.FormEvent<HTMLFormElement>
+							);
+						}
+					}}
 				/>
 
-				<Button type="submit">Enviar</Button>
+				<Button
+					type="submit"
+					size="icon"
+					className="absolute bottom-4 right-4"
+					disabled={!input}
+				>
+					<ArrowUp className="h-4 w-4" />
+				</Button>
 			</form>
 		</div>
 	);

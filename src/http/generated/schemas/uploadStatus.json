@@ -1,1 +1,0 @@
-{"type":"string","enum":["uploading","uploaded","failed"],"title":"UploadStatus","description":"File upload status values","x-readme-ref-name":"UploadStatus"}

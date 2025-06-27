@@ -4,8 +4,8 @@ import { Button } from "@/components/ui/button";
 import { Textarea } from "@/components/ui/textarea";
 import { useChat } from "@ai-sdk/react";
 import { ArrowUp } from "lucide-react";
-import { type KeyboardEvent, useEffect } from "react";
 import { ScrollArea } from "../ui/scroll-area";
+import { type KeyboardEvent, useEffect } from "react";
 import Prism from "prismjs";
 import "prismjs/themes/prism-tomorrow.css";
 import "prismjs/components/prism-typescript";
@@ -52,6 +52,7 @@ export function AiChat() {
 						{message.role === "user" && (
 							<Avatar className="w-10 h-10">
 								<AvatarFallback>IZ</AvatarFallback>
+
 								<AvatarImage
 									src="https://github.com/izaiasmorais.png"
 									alt="Avatar do Usuário"
@@ -65,7 +66,7 @@ export function AiChat() {
 
 								<AvatarImage
 									src="/brain.svg"
-									alt="Logo do Memory Mind"
+									alt="Logo do Memo AI"
 									className="w-5 h-5"
 								/>
 							</Avatar>
@@ -95,7 +96,7 @@ export function AiChat() {
 				className="relative flex items-center w-full"
 			>
 				<Textarea
-					className="min-h-12 w-full rounded-xl bg-muted/80 resize-none py-3 pr-16 text-sm h-[100px]"
+					className="min-h-12 w-full rounded-xl bg-muted/80 resize-none p-4 text-sm h-[100px]"
 					placeholder="Como posso ajudar?"
 					value={input}
 					onChange={handleInputChange}
@@ -112,7 +113,7 @@ export function AiChat() {
 				<Button
 					type="submit"
 					size="icon"
-					className="absolute bottom-4 right-4"
+					className="absolute bottom-4 right-4 "
 					disabled={!input}
 				>
 					<ArrowUp className="h-4 w-4" />

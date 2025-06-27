@@ -4,9 +4,9 @@ import { Metadata } from "next";
 import Link from "next/link";
 
 export const metadata: Metadata = {
-	title: "Memory Mind",
-	description: "Crie agentes realmente inteligentes",
-};;
+	title: "Memo AI",
+	description: "Gerencie transcrições de reuniões com IA",
+};
 
 export default function NotFound() {
 	return (

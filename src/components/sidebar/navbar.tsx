@@ -15,9 +15,9 @@ const navigationItems = [
 		label: "Dashboard",
 	},
 	{
-		href: "/resumos",
+		href: "/transcricao",
 		icon: FileText,
-		label: "Resumos",
+		label: "Transcrição",
 	},
 	{
 		href: "/chat-bot",

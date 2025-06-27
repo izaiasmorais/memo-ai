@@ -5,7 +5,7 @@ import Providers from "./providers";
 import "./globals.css";
 
 export const metadata: Metadata = {
-	title: "MemoryMind",
+	title: "MemoAI",
 	description: "Crie agentes realmente inteligentes",
 };
 
@@ -17,10 +17,13 @@ export default function RootLayout({
 	return (
 		<html lang="pt-BR" suppressHydrationWarning>
 			<head>
-				<link rel="icon" href="/memory-mind-logo.svg" sizes="any" />
+				<link rel="icon" href="/memo-ai-logo.svg" sizes="any" />
 			</head>
 
-			<body className={`${GeistSans.className} antialiased`}>
+			<body
+				className={`${GeistSans.className} antialiased`}
+				suppressHydrationWarning
+			>
 				<Providers>{children}</Providers>
 			</body>
 		</html>

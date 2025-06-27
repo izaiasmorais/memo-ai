@@ -1,1 +1,0 @@
-{"type":"string","enum":["upload_file","process_media"],"title":"TaskType","description":"Type of task","x-readme-ref-name":"TaskType"}

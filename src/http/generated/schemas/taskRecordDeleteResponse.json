@@ -1,1 +1,0 @@
-{"properties":{"success":{"type":"boolean","title":"Success"},"message":{"type":"string","title":"Message"}},"type":"object","required":["success","message"],"title":"TaskRecordDeleteResponse","description":"Response for deleting a task record","example":{"message":"Task record deleted successfully","success":true},"x-readme-ref-name":"TaskRecordDeleteResponse"}

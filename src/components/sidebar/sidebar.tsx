@@ -10,12 +10,12 @@ export function Sidebar() {
 			<div className="flex items-center gap-2">
 				<Image
 					src={"/memory-mind-logo.svg"}
-					alt="Logo MemoryMind"
+					alt="Logo MemoAI"
 					width={24}
 					height={24}
 				/>
 
-				<span className={GeistMono.className}>MemoryMind</span>
+				<span className={GeistMono.className}>MemoAI</span>
 			</div>
 
 			<Navbar />

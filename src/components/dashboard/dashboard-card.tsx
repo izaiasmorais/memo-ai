@@ -1,16 +1,21 @@
-import { LucideIcon } from "lucide-react";
+"use client";
+
+import { ArrowRight, LucideIcon } from "lucide-react";
 import { Button } from "../ui/button";
+import Link from "next/link";
 
 export interface DashboardCardProps {
 	icon: LucideIcon;
 	title: string;
 	description: string;
+	url: string;
 }
 
 export function DashboardCard({
 	title,
 	description,
 	icon: Icon,
+	url,
 }: DashboardCardProps) {
 	return (
 		<div className="p-4 rounded-lg border flex flex-col gap-4">
@@ -25,7 +30,12 @@ export function DashboardCard({
 			</div>
 
 			<div className="flex w-full justify-end my-auto">
-				<Button>Acessar</Button>
+				<Button asChild>
+					<Link href={url}>
+						Acessar
+						<ArrowRight />
+					</Link>
+				</Button>
 			</div>
 		</div>
 	);

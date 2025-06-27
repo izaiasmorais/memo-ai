@@ -1,10 +1,10 @@
-# Memory Mind
+# Memo AI
 
 ![image](https://github.com/user-attachments/assets/72b7429e-e661-439a-90a1-54f8d67976a1)
 
 ## Introdução
 
-Memory Mind é uma plataforma de IA que permite criar agentes inteligentes com memória contextual. Você pode subir documentos, blocos de texto ou código para treinar a IA em chats específicos, tornando cada chat um especialista no tema desejado. Por exemplo, crie um chat "Clean Architecture", envie exemplos de código e faça perguntas para obter respostas contextualizadas e precisas, otimizando o uso da IA para aprendizado, desenvolvimento e automação de conhecimento.
+Memo AI é uma plataforma de IA que permite fazer upload de conversas em formato de áudio e gerar uma transcrição completa dessa conversa, bem como fazer um resumo detalhado. É possível também interagir com essas transcrições e resumos através de um chatbot.
 
 <img src="https://img.shields.io/static/v1?label=STATUS&message=DEVELOPING&color=000000&style=for-the-badge"/> <img src="https://img.shields.io/static/v1?label=NODE&message=V20.18.1&color=000000&style=for-the-badge"/> <img src="https://img.shields.io/static/v1?label=LICENSE&message=MIT&color=000000&style=for-the-badge"/>
 
@@ -14,31 +14,23 @@ Memory Mind é uma plataforma de IA que permite criar agentes inteligentes com m
 - Biblioteca: [ReactJS](https://react.dev/)
 - Framework: [Next.js](https://nextjs.org/)
 - Componentes: [Shadcn-ui](https://ui.shadcn.com/)
-- Gerenciamento de formulários: [React Hook Form](https://www.react-hook-form.com/)
-- Validação: [Zod](https://zod.dev/)
 - Ícones: [Lucide React](https://lucide.dev/)
+- Requisições HTTP: [Axios](https://axios-http.com/ptbr/docs/intro)
 - SDK de IA: [Vercel AI SDK](https://ai-sdk.dev/)
 
 ## Funcionalidades
 
-- [ ] Dashboard com visão geral dos agentes e chats.
-- [ ] Criação de chats especializados (agentes) com memória contextual.
-- [ ] Upload de documentos, textos e códigos para treinar a IA de cada chat.
-- [ ] Chat inteligente para interação com agentes treinados.
-- [ ] Geração de resumos automáticos a partir dos conteúdos enviados.
-- [ ] Organização e consulta de documentos enviados.
-- [ ] Podcasts e áudios integrados para consumo de conteúdo.
-- [ ] Outras ferramentas de produtividade baseadas em IA.
-- [ ] Ajuda e suporte integrado.
-- [ ] Design responsivo e modo noturno.
+- [x] Transcrição de áudios em tempo real.
+- [ ] Resumo detalhado da transcrição.
+- [ ] Chatbot integrado com as transcrições e resumos.
 
 ## Instalação
 
 Clone o repositório:
 
 ```bash
-git clone https://github.com/izaiasmorais/memory-mind
-cd memory-mind
+git clone https://github.com/izaiasmorais/memo-ai
+cd memo-ai
 ```
 
 Instale as dependências:

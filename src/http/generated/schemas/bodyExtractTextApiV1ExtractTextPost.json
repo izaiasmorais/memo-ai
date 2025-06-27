@@ -1,1 +1,0 @@
-{"properties":{"file":{"type":"string","format":"binary","title":"File","description":"PDF file to extract text from"}},"type":"object","required":["file"],"title":"Body_extract_text_api_v1_extract_text_post","x-readme-ref-name":"Body_extract_text_api_v1_extract_text_post"}

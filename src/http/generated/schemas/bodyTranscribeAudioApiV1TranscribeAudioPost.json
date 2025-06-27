@@ -1,1 +1,0 @@
-{"properties":{"file":{"type":"string","format":"binary","title":"File"}},"type":"object","required":["file"],"title":"Body_transcribe_audio_api_v1_transcribe_audio_post","x-readme-ref-name":"Body_transcribe_audio_api_v1_transcribe_audio_post"}

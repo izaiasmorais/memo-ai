@@ -12,7 +12,7 @@ export default function Page() {
 					description="Vizualize todos os seus documentos enviados aqui."
 				/>
 
-				<Button className="dark:bg-rose-500 dark:text-white">
+				<Button className=" dark:text-white">
 					<FileUp />
 					Enviar Documento
 				</Button>

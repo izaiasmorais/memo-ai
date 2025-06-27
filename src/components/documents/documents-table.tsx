@@ -53,7 +53,7 @@ export default function DocumentsTable() {
 									</Button>
 
 									<Button size="icon" variant="outline">
-										<Trash className="text-red-500" size={16} />
+										<Trash className="text-rose-500" size={16} />
 									</Button>
 								</div>
 							</TableCell>

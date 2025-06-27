@@ -1,0 +1,1 @@
+{"type":"string","enum":["basic","ocr","transcription","whisper","default"],"title":"ParserStrategy","description":"File parsing strategy options for different content types","x-readme-ref-name":"ParserStrategy"}

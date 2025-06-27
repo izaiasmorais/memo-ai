@@ -1,0 +1,1 @@
+{"type":"string","enum":["uploaded","completed","failed"],"title":"TaskStatusFilter","description":"Task status values for filtering records","x-readme-ref-name":"TaskStatusFilter"}

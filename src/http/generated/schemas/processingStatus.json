@@ -1,0 +1,1 @@
+{"type":"string","enum":["processing","completed","failed"],"title":"ProcessingStatus","description":"File processing status values","x-readme-ref-name":"ProcessingStatus"}

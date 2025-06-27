@@ -1,6 +1,6 @@
 # Memo AI
 
-![image](https://github.com/user-attachments/assets/72b7429e-e661-439a-90a1-54f8d67976a1)
+![image](https://github.com/user-attachments/assets/00ec3fdd-628f-4ba8-838e-4f10911f270f)
 
 ## Introdução
 

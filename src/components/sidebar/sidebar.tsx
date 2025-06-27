@@ -9,7 +9,7 @@ export function Sidebar() {
 		<aside className="h-full bg-sidebar flex flex-col gap-6 p-4">
 			<div className="flex items-center gap-2">
 				<Image
-					src={"/memory-mind-logo.svg"}
+					src={"/memo-ai-logo.svg"}
 					alt="Logo MemoAI"
 					width={24}
 					height={24}

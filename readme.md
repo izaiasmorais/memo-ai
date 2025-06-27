@@ -42,8 +42,8 @@ pnpm install
 Configure o arquivo .env com suas credenciais:
 
 ```env
-DATABASE_URL=
-OPENAI_API_KEY=
+NEXT_PUBLIC_OPENAI_API_KEY=
+NEXT_PUBLIC_API_URL=
 ```
 
 ## Executando o Projeto
